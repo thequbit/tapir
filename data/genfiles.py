@@ -29,7 +29,7 @@ with open("timhortons.json","w") as f:
 
 with open("timhortons.csv","w") as f:
     writer = csv.writer(f,delimiter=',', quotechar='"')
-    writer.writerow("markerid,storeid,street,city,state,lat,lng,zipcode,")
+    writer.writerow(["markerid","storeid","street","city","state","lat","lng","zipcode"])
     for store in stores:
         row = [store['markerid'].encode('utf-8'),
                store['storeid'].encode('utf-8'),
